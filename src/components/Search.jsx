@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { collection, query, where, getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { db } from '../firebase.js';
 import Card from './Card';
 
@@ -13,19 +13,24 @@ export default function Search() {
     const handleChange = (e) => {
         setSearch(e.target.value);
     }
-  
-    const handleSubmit = async (e) => {
 
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        if (!search.trim()) return;
+
         setLoading(true);
         setError(null);
         setHasSearched(true);
 
         try {
             const artistsRef = collection(db, "artists");
-            const q = query(artistsRef, where("name", ">=", search), where("name", "<=", search + '\uf8ff'));
-            const querySnapshot = await getDocs(q);
-            const artistsData = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            const querySnapshot = await getDocs(artistsRef);
+            
+            const searchTerm = search.trim().toLowerCase();
+            const artistsData = querySnapshot.docs
+                .map(doc => ({ id: doc.id, ...doc.data() }))
+                .filter(artist => artist.name.toLowerCase() === searchTerm);
+            
             setArtists(artistsData);
         } catch (err) {
             console.error("Error fetching artists: ", err);
@@ -33,8 +38,9 @@ export default function Search() {
         } finally {
             setLoading(false);
         }
-
     }
+
+
 
     return (
         <div 
