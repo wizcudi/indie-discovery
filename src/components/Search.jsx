@@ -77,18 +77,19 @@ export default function Search() {
                         className="
                             flex-grow 
                             text-gray-700
-                            text-center
+                            text-lg
                             py-1 
                             px-2 
                             outline-none
                             max-xs:border-2 border-blue-600 rounded
+                            max-xs:text-center
                             focus:bg-slate-300
                             autofill:bg-slate-200
                             bg-slate-200
                             transition-all
                         " 
                         type="text"
-                        placeholder='Search by Name or ID' 
+                        placeholder='Search by Name' 
                         onChange={handleChange} 
                         value={search}
                         autoComplete="off"

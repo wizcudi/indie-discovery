@@ -16,13 +16,14 @@ function App() {
         flex-col
         bg-slate-200
         min-h-screen
+        w-full
       ">
         <Navigation />
         <main className="
           flex
           items-center
           justify-center
-          min-h-screen
+          
           p-6
         ">
           <Routes>
