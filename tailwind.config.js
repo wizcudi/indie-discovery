@@ -7,9 +7,9 @@ export default {
   theme: {
     extend: {
       screens: {
-        'xs': '370px',
+        'xs': '381px',
         // You can also use max-width queries
-        'max-xs': {'max': '370px'}
+        'max-xs': {'max': '381px'}
       }
     },
   },

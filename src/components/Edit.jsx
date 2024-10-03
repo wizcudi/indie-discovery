@@ -132,7 +132,7 @@ export default function Edit() {
 
     return (
         <div className='w-full max-w-lg mx-auto'>
-            <select className='border border-black w-full p-2 text-2xl ' onChange={handleArtistSelect} value={selectedArtistId || ''}>
+            <select className='border border-black w-full p-2 text-2xl rounded' onChange={handleArtistSelect} value={selectedArtistId || ''}>
                 <option value="">Select an artist to edit</option>
                 {artists.map(artist => (
                     <option key={artist.id} value={artist.id}>{artist.name}</option>

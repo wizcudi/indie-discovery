@@ -65,7 +65,7 @@ export default function Search() {
                     className='
                         w-full
                         flex
-                        flex-wrap 
+                        flex-wrap
                         items-center 
                         justify-center
                         gap-2
