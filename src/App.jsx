@@ -20,9 +20,9 @@ function App() {
         <Navigation />
         <main className="
           flex
-          flex-grow
-          justify-center
           items-center
+          justify-center
+          min-h-screen
           p-6
         ">
           <Routes>

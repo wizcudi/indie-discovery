@@ -4,11 +4,12 @@ import Search from './Search'
 export default function Home() {
     return (
         <div className='
-            flex 
+            flex
             flex-col
             items-center
             gap-y-6
             p-6
+            max-xs:px-2
         '>
             <h1 className="
                  

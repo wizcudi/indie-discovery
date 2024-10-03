@@ -57,14 +57,18 @@ export default function Search() {
                     w-full
                     border-b-2
                     border-blue-600
+                    max-xs:border-none
                 '
                 onSubmit={handleSubmit}
             >
                 <div 
                     className='
                         w-full
-                        flex 
+                        flex
+                        flex-wrap 
                         items-center 
+                        justify-center
+                        gap-2
                         py-2
                     '
                 >
@@ -72,12 +76,13 @@ export default function Search() {
                         name='talent'
                         className="
                             flex-grow 
-                            text-gray-700 
-                            mr-3 
+                            text-gray-700
+                            text-center
                             py-1 
                             px-2 
                             outline-none
-                            focus:outline-none
+                            max-xs:border-2 border-blue-600 rounded
+                            focus:bg-slate-300
                             autofill:bg-slate-200
                             bg-slate-200
                             transition-all
@@ -96,6 +101,7 @@ export default function Search() {
                             px-4
                             rounded
                             bg-blue-600
+                            max-xs:w-full
                             hover:bg-blue-500
                             whitespace-nowrap
                         '

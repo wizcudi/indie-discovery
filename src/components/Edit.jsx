@@ -131,8 +131,8 @@ export default function Edit() {
     if (error) return <div>Error: {error}</div>;
 
     return (
-        <div className='w-full px-6'>
-            <select onChange={handleArtistSelect} value={selectedArtistId || ''}>
+        <div className='w-full max-w-lg mx-auto'>
+            <select className='border border-black w-full p-2 text-2xl ' onChange={handleArtistSelect} value={selectedArtistId || ''}>
                 <option value="">Select an artist to edit</option>
                 {artists.map(artist => (
                     <option key={artist.id} value={artist.id}>{artist.name}</option>
@@ -140,7 +140,7 @@ export default function Edit() {
             </select>
 
             {selectedArtistId && (
-                <form onSubmit={handleSubmit} className='border border-black bg-teal-600 py-8 px-4 flex flex-col gap-4 w-full max-w-lg mx-auto'>
+                <form onSubmit={handleSubmit} className='border border-black bg-teal-600 py-8 px-4 flex flex-col gap-4 w-full '>
                     <input
                         name="name"
                         value={formData.name}

@@ -18,17 +18,26 @@ export default function Admin() {
 
     return (
         <div 
+            // className='
+            //     flex
+            //     flex-col
+            //     items-center
+            //     justify-center
+            //     gap-4
+            //     border-2
+            //     border-red-500
+            // '
             className='
+                w-full
                 flex
                 flex-col
-                items-center
-                justify-center
                 gap-4
             '
         >
             <h1
                 className='
                     text-3xl
+                    text-center
                 '
             >
                 Welcome Back
@@ -52,6 +61,9 @@ export default function Admin() {
                     text-xl
                     hover:bg-green-700
                     hover:text-white
+                    w-full
+                    max-w-lg
+                    mx-auto
                     '
                     
                 >Add</button>
@@ -66,6 +78,10 @@ export default function Admin() {
                     text-xl
                     hover:bg-green-700
                     hover:text-white
+                    w-full
+                    max-w-lg
+                    mx-auto
+                    mb-6
                     '
                 >Edit</button>
             </div>
